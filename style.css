@@ -1,0 +1,113 @@
+
+/*attribut för samtliga element*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "lato", sans-serif;
+    font-weight: lighter;
+}
+
+/*tar bort understräck från anchortags och gör texten vit istället för blå*/
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*hemsidan utformas med hjälp av grid*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    grid-template-areas: "header header" "sidebar content" "footer footer";
+    
+}
+
+/*attribut för header*/
+.header{
+    grid-area: header;
+    background-color: #E195AB;
+    color: #FFEDFA;
+    padding: 20px;
+    text-align: center;
+}
+
+/*attribut för sidebaren*/
+.sidebar{
+    grid-area: sidebar;
+    background-color: #CAE0BC;
+    padding: 20px;
+    border-right: 2px solid #ddd3;
+}
+
+/*attribut för content inom main*/
+.content{
+    grid-area: content;
+    padding: 20px;
+}
+
+/*attribut för footern*/
+.footer{
+    grid-area: footer;
+    background-color: #E195AB;
+    color: #CAE0BC;
+    text-align: center;
+    padding: 10px;
+}
+
+/*stylar sidebarens meny*/
+.sidebar-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*stylar innehållet i menyn*/
+.menu-item{
+    background-color: #E195AB;
+    color: #FFEDFA;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+
+/*gör att en annan färg syns på det meny-item som musen är över*/
+.menu-item:hover{
+    background-color:lightslategray;
+}
+
+/*attrubut för elementet article*/
+article{
+    background-color: #FFEDFA;
+    color: #E195AB;
+    padding: 20px;
+    border: 2px solid #CAE0BC;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);;
+
+}
+
+/*attribut för login-rutan*/
+.login{
+    background-color: #CAE0BC;
+    color:#E195AB;
+    border: 2px solid #E195AB;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    width: 300px;
+    padding: 40px;
+}
+
+/*gör mellanrum mellan login-items i loginrutan*/
+.login-item{
+    margin: 10px;
+}
+
+/*attribut för elementet h2*/
+h2{
+    color: #E195AB;
+    text-align: center;
+}
